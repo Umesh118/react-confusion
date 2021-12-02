@@ -40,12 +40,6 @@ class CommentForm extends Component {
       values.author,
       values.comment
     );
-    console.log(
-      this.props.dishId,
-      values.rating,
-      values.author,
-      values.comment
-    );
   }
 
   render() {

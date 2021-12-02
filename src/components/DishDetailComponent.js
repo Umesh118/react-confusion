@@ -31,6 +31,7 @@ function RenderDish({ dish }) {
 }
 
 function RenderComments({ comments, addComment, dishId }) {
+  console.log(comments);
   if (comments == null) {
     return <div></div>;
   }
@@ -60,6 +61,7 @@ function RenderComments({ comments, addComment, dishId }) {
 }
 
 const DishDetail = (props) => {
+  // console.log("Receive Comments :", props.comments);
   return (
     <div className="container">
       <div className="row">

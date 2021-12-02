@@ -41,6 +41,7 @@ class Main extends Component {
     };
 
     const DishWithId = ({ match }) => {
+
       return (
         // 10 -> base 10
         <DishDetail
@@ -50,7 +51,7 @@ class Main extends Component {
             )[0]
           }
           comments={this.props.comments.filter(
-            (comment) => comment.id === parseInt(match.params.dishId, 10)
+            (comment) => comment.dishId === parseInt(match.params.dishId, 10)
           )}
           addComment={this.props.addComment}
         />
