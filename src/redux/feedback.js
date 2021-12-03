@@ -1,12 +1,20 @@
-import * as ActionType from './ActionTypes';
+import * as ActionType from "./ActionTypes";
 
-export const Feedback = (state = {
-    feedback: []
-}, action) => {
-    switch (action.type) {
-        case ActionType.ADD_FEEDBACK:
-            return { ...state, feedback: state.feedback.concat(action.payload) };
-        default:
-            return state;
-    }
-}
+export const Feedback = (
+  state = {
+    feedbacks: [],
+  },
+  action
+) => {
+  switch (action.type) {
+    case ActionType.ADD_FEEDBACK:
+      var feedback = action.payload;
+      console.log("Feedback : ", {
+        ...state,
+        feedback: state.feedbacks.concat(feedback),
+      });
+      return { ...state, feedback: state.feedbacks.concat(feedback) };
+    default:
+      return state;
+  }
+};
